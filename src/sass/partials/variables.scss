@@ -1,0 +1,23 @@
+$xs: "screen and (max-width: 767px)";
+$sm: "screen and (max-width: 1023px)";
+$md: "screen and (max-width: 1439px)";
+$lg: "screen and (max-width: 1659px)";
+$xl: "screen and (max-width: 1920px)";
+
+@function wsm($value) {
+    @return ($value*100vw)/1660
+}
+
+;
+
+@function wdm($value) {
+    @return ($value*100vw)/768
+}
+
+;
+
+@function mdm($value) {
+    @return ($value*100vw)/320
+}
+
+;

@@ -1,0 +1,69 @@
+@media #{$lg} {
+    .header {
+        width: 100%;
+        padding: 0 35px;
+    }
+}
+
+@media #{$md} {
+    .header {
+        &__wrapper {
+            &-nav {
+                margin-left: 70px;
+
+                ul {
+                    li {
+                        margin-right: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media #{$sm} {
+    .header {
+        top: 10px;
+
+        &__wrapper {
+            &-logo {
+                img {
+                    width: 80px;
+                }
+            }
+
+            &-nav {
+                margin-left: 40px;
+                padding-top: 8px;
+
+                ul {
+                    li {
+                        margin-right: 30px;
+
+                        a {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            &-user {
+                margin-right: 0;
+
+                .user-avatar {
+                    &::after {
+                        width: 10px;
+                        height: 10px;
+                    }
+
+                    img {
+                        width: 40px;
+                        height: 40px;
+
+
+                    }
+                }
+            }
+        }
+    }
+}

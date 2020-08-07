@@ -1,0 +1,115 @@
+.header {
+    position: absolute;
+    width: 1660px;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+
+        &-logo {
+            display: block;
+        }
+
+        &-nav {
+            margin-left: 150px;
+            padding-top: 12px;
+
+            ul {
+                display: flex;
+                align-items: center;
+                margin: 0;
+
+                li {
+                    margin-right: 75px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: #2e266f;
+                        font-family: 'Poppins-Medium';
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        &-user {
+            margin-left: auto;
+            position: relative;
+            margin-right: 50px;
+            padding-top: 6px;
+
+            .user {
+                display: flex;
+                align-items: center;
+
+                &-avatar {
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                    }
+
+                    position: relative;
+
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        top: 0;
+                        right: 3px;
+                        width: 12px;
+                        height: 12px;
+                        background-color: #3fa2f7;
+                        border-radius: 50%;
+                    }
+                }
+
+                &-name {
+                    color: #ffffff;
+                    font-family: 'Poppins-Medium';
+                    font-size: 16px;
+                    margin: 0 15px;
+                }
+
+                &-dropdown {
+                    transition: .2s;
+
+                }
+
+                &-menu {
+                    background-color: #adadad;
+                    padding: 20px;
+                    position: absolute;
+                    right: 0;
+                    top: 56px;
+                    z-index: -1;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: .2s;
+                }
+
+                &:hover {
+                    .user-menu {
+                        opacity: 1;
+                        visibility: visible;
+                        z-index: 1;
+                    }
+
+                    .user-dropdown {
+                        transform: rotate(180deg);
+
+                    }
+                }
+            }
+
+
+        }
+    }
+}
